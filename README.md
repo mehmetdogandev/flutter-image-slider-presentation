@@ -1,119 +1,211 @@
 # 📸 Image Slider Presentation App
 
-Görsellerinizi profesyonel sunumlara dönüştürün! Flutter ile geliştirilmiş, kullanıcı dostu bir sunum oluşturma uygulaması.
+**Öğrenci:** Mehmet DOĞAN  
+**Proje:** Flutter ile Dinamik Sunum Uygulaması
+
+---
+
+## 📝 Proje Hakkında
+
+Bu proje, Flutter framework'ü kullanılarak geliştirilmiş interaktif bir görsel sunum uygulamasıdır. Kullanıcılar kendi resimlerini seçerek, özelleştirilebilir geçiş efektleri ve sürelerle profesyonel sunumlar oluşturabilirler.
 
 ## ✨ Özellikler
 
+### Temel Özellikler
 - 🖼️ **Çoklu Resim Seçimi**: Galeriden istediğiniz kadar resim seçin
-- ⏱️ **Özelleştirilebilir Geçiş Süreleri**: Her slayt için ayrı ayrı süre ayarlayın (1-10 saniye)
-- 🎨 **Animasyon Efektleri**: Fade, Slide ve Zoom geçiş animasyonları
+- ⏱️ **Özelleştirilebilir Geçiş Süreleri**: Her slayt için 1-10 saniye arası süre ayarlayın
+- 🎨 **Animasyon Efektleri**: 
+  - Fade (Soldurma)
+  - Slide (Kaydırma)
+  - Zoom (Yakınlaştırma)
 - 🔀 **Karıştırma Modu**: Slaytları rastgele sıraya koyun
-- ↕️ **Sürükle-Bırak Sıralama**: Slaytları kolayca yeniden düzenleyin
+- ↕️ **Sürükle-Bırak Sıralama**: `ReorderableListView` ile slaytları kolayca yeniden düzenleyin
+
+### Gelişmiş Özellikler
 - ⏲️ **Çalışma Zamanlayıcısı**: Belirli bir süre sonra otomatik çıkış
 - 💾 **Kaydetme Fonksiyonu**: Sunumlarınızı saklayın
-- 🎯 **Tam Ekran Mod**: Çift tıklama ile ana menüye dönüş
-- 🌓 **Dark Theme**: Göz dostu karanlık tema
+- 🎯 **Tam Ekran Sunum Modu**: Dikkat dağıtıcı unsurlar olmadan sunum
+- 👆 **Çift Tıklama Navigasyonu**: Hızlı menü geçişi
+- 🌓 **Dark Theme**: Modern ve göz dostu arayüz
+- 📊 **Geri Sayım Göstergesi**: Her slayt için kalan süre bilgisi
 
-## 🚀 Kurulum
+## 🛠️ Kullanılan Teknolojiler
 
-### Gereksinimler
+### Framework & Dil
+- **Flutter** 3.6.0
+- **Dart** SDK
 
-- Flutter SDK (3.6.0 veya üzeri)
-- Dart SDK
-- Android Studio / VS Code
-- iOS için: Xcode (macOS)
-- Android için: Android SDK
-
-### Adımlar
-
-1. Repository'yi klonlayın:
-```bash
-git clone https://github.com/kullaniciadi/flutter-image-slider-app.git
-cd flutter-image-slider-app
-```
-
-2. Bağımlılıkları yükleyin:
-```bash
-flutter pub get
-```
-
-3. Uygulamayı çalıştırın:
-```bash
-flutter run
-```
-
-## 📦 Kullanılan Paketler
-
+### Paketler
 ```yaml
 dependencies:
   flutter:
     sdk: flutter
-  image_picker: ^0.8.5+3  # Galeri ve kamera erişimi
-  fluttertoast: ^8.0.9    # Bildirim mesajları
+  image_picker: ^0.8.5+3  # Galeri ve kamera erişimi için
+  fluttertoast: ^8.0.9    # Kullanıcı bildirimleri için
   cupertino_icons: ^1.0.8 # iOS stil ikonlar
 ```
 
-## 🎮 Kullanım
+## 🚀 Kurulum ve Çalıştırma
 
-### Sunum Oluşturma
+### Gereksinimler
+- Flutter SDK (≥3.6.0)
+- Android Studio / VS Code
+- Git
 
-1. Ana ekranda "Proceed to create a presentation" butonuna tıklayın
-2. "Resim Seçin" butonu ile galeriden resimlerinizi seçin
-3. Her slayt için:
-   - ⏱️ Süre ayarlamak için zamanlayıcı ikonuna tıklayın
-   - 🎨 Animasyon seçmek için animasyon ikonuna tıklayın
-   - 🗑️ Silmek için çöp kutusu ikonuna tıklayın
+### Kurulum Adımları
 
-### Slayt Yönetimi
+1. **Repository'yi klonlayın:**
+```bash
+git clone https://github.com/[kullaniciadi]/offering_project.git
+cd offering_project
+```
 
-- **Sıralama**: Slaytları yukarı-aşağı sürükleyerek yeniden düzenleyin
-- **Karıştırma**: Shuffle ikonu ile rastgele sıralama
-- **Kaydetme**: Save ikonu ile sunumu kaydedin
-- **Temizleme**: Clear ikonu ile tüm slaytları silin
+2. **Bağımlılıkları yükleyin:**
+```bash
+flutter pub get
+```
 
-### Sunum Başlatma
+3. **Uygulamayı çalıştırın:**
+```bash
+flutter run
+```
 
-1. "Start" butonuna tıklayarak sunumu başlatın
-2. Her slayt belirlediğiniz süre boyunca gösterilir
-3. "Stop" butonu ile sunumu durdurun
+## 📱 Kullanım Kılavuzu
+
+### 1. Ana Ekran
+- "Proceed to create a presentation" butonuna tıklayarak başlayın
+
+### 2. Sunum Oluşturma
+1. **Resim Seçimi**: "Resim Seçin" butonu ile galeriden resimlerinizi seçin
+2. **Slayt Düzenleme**:
+   - ⏱️ Timer ikonu → Geçiş süresini ayarlayın (Slider ile 1-10 saniye)
+   - 🎨 Animation ikonu → Geçiş efekti seçin (Fade/Slide/Zoom)
+   - 🗑️ Delete ikonu → Slaytı kaldırın
+   - Sürükle-bırak ile sıralamayı değiştirin
+
+### 3. Slayt Yönetimi
+- 🔀 **Shuffle**: Slaytları karıştırın
+- 💾 **Save**: Sunumu kaydedin
+- 🗑️ **Clear**: Tüm slaytları temizleyin
+
+### 4. Sunum Oynatma
+1. "Start" butonu ile sunumu başlatın
+2. Otomatik geçişleri izleyin
+3. "Stop" butonu ile durdurun
 4. Çift tıklama ile ana menüye dönün
 
-### Çalışma Zamanlayıcısı
+### 5. Çalışma Zamanlayıcısı
+- Süre girin (saniye cinsinden)
+- "Çalışma Süresini Başlat" butonuna tıklayın
+- Süre dolunca otomatik olarak ana menüye dönersiniz
 
-1. "Çalışma Süresi (saniye)" alanına süre girin
-2. "Çalışma Süresini Başlat" butonuna tıklayın
-3. Belirlenen süre sonunda otomatik olarak ana menüye dönersiniz
-
-## 🛠️ Proje Yapısı
+## 🏗️ Proje Yapısı
 
 ```
-lib/
-├── main.dart           # Ana uygulama ve giriş noktası
-│   ├── MyApp           # MaterialApp widget'ı
-│   ├── MainScreen      # Ana menü ekranı
-│   └── ImageSliderScreen # Sunum editörü ve oynatıcı
+offering_project/
+├── lib/
+│   └── main.dart              # Ana uygulama kodu
+├── android/                   # Android platform dosyaları
+├── ios/                       # iOS platform dosyaları
+├── web/                       # Web platform dosyaları
+├── test/                      # Test dosyaları
+├── pubspec.yaml              # Proje bağımlılıkları
+└── README.md                 # Proje dokümantasyonu
 ```
 
-## 🎯 Özellik Detayları
+## 🎯 Kod Yapısı
 
-### Animasyon Türleri
+### Widget Hiyerarşisi
+```
+MyApp (MaterialApp)
+└── MainScreen
+    └── ImageSliderScreen
+        ├── Image Picker
+        ├── ReorderableListView (Slayt listesi)
+        ├── Animation Controller
+        └── Timer Management
+```
 
-- **Fade**: Yumuşak soldurma efekti
-- **Slide**: Kaydırma geçişi
-- **Zoom**: Yakınlaştırma efekti
+### Önemli Sınıflar
 
-### Slayt Süreleri
+#### `MyApp`
+- MaterialApp root widget'ı
+- Dark theme konfigürasyonu
 
-- Minimum: 1 saniye
-- Maximum: 10 saniye
-- Varsayılan: 2 saniye
+#### `MainScreen`
+- Ana menü ekranı
+- Settings dialog'u
+- Navigation kontrolü
+
+#### `ImageSliderScreen` (StatefulWidget)
+- **State Değişkenleri:**
+  - `List<Uint8List> _images` → Seçilen resimler
+  - `List<int> _intervals` → Her slayt için süre
+  - `List<String> _animations` → Her slayt için animasyon tipi
+  - `int _currentIndex` → Aktif slayt indexi
+  - `bool _isSliding` → Sunum durumu
+  - `Timer? _timer` → Slayt geçiş timer'ı
+  - `Timer? _workTimer` → Çalışma süresi timer'ı
+
+- **Önemli Metodlar:**
+  - `_pickImages()` → ImagePicker ile resim seçimi
+  - `_startSlider()` → Sunum başlatma
+  - `_stopSlider()` → Sunum durdurma
+  - `_shuffleImages()` → Karıştırma
+  - `_getAnimatedImage()` → Animasyon uygulama
+  - `_startWorkTimer()` → Zamanlayıcı başlatma
+
+## 🎨 Özellik Detayları
+
+### Animasyon Tipleri
+| Animasyon | Açıklama | Widget |
+|-----------|----------|--------|
+| Fade | Yumuşak soldurma efekti | `FadeTransition` |
+| Slide | Kaydırma geçişi | `SlideTransition` |
+| Zoom | Yakınlaştırma efekti | `ScaleTransition` |
+
+### Süre Ayarları
+- **Minimum:** 1 saniye
+- **Maksimum:** 10 saniye
+- **Varsayılan:** 2 saniye
+- **Ayarlama:** Slider ile
 
 ## 📱 Platform Desteği
 
-- ✅ Android
-- ✅ iOS
-- ✅ Web (kısıtlı)
-- ✅ Desktop (Windows, macOS, Linux)
+| Platform | Durum |
+|----------|-------|
+| Android | ✅ Tam destek |
+| iOS | ✅ Tam destek |
+| Web | ⚠️ Kısıtlı (Image picker sınırlı) |
+| Windows | ✅ Desktop desteği |
+| macOS | ✅ Desktop desteği |
+| Linux | ✅ Desktop desteği |
+
+## 🔮 Gelecek Geliştirmeler
+
+- [ ] Video slayt desteği
+- [ ] Background müzik ekleme
+- [ ] Cloud storage entegrasyonu
+- [ ] PDF/Video export
+- [ ] Daha fazla animasyon efekti
+- [ ] Tema özelleştirme seçenekleri
+- [ ] Slayt notları ekleme
+- [ ] Şablon galerisi
+
+## 📚 Öğrenilen Konular
+
+Bu proje geliştirilirken aşağıdaki Flutter konuları uygulamalı olarak öğrenilmiştir:
+
+- State Management (StatefulWidget)
+- Image Picker entegrasyonu
+- Timer kullanımı
+- ReorderableListView ile drag & drop
+- Custom animations (Fade, Slide, Zoom)
+- Navigation ve routing
+- Dialog ve AlertDialog kullanımı
+- GestureDetector (double tap)
+- Async/await operations
+- Material Design components
 
 ## 🤝 Katkıda Bulunma
 
@@ -125,21 +217,17 @@ lib/
 
 ## 📄 Lisans
 
-Bu proje MIT lisansı altında lisanslanmıştır. Detaylar için `LICENSE` dosyasına bakın.
+Bu proje eğitim amaçlı geliştirilmiştir.
 
-## 👨‍💻 Geliştirici
+## 📧 İletişim
 
-Sorularınız veya önerileriniz için issue açabilirsiniz!
+**Mehmet DOĞAN**  
+e-mail: mehmetdogan.dev@gmail.com
 
-## 🔮 Gelecek Özellikler
-
-- [ ] Video desteği
-- [ ] Müzik ekleme
-- [ ] Bulut senkronizasyonu
-- [ ] Daha fazla animasyon efekti
-- [ ] Export to PDF/Video
-- [ ] Tema özelleştirme
+Sorularınız için GitHub Issues kullanabilirsiniz.
 
 ---
 
 ⭐ Projeyi beğendiyseniz yıldız vermeyi unutmayın!
+
+**Son Güncelleme:** Ekim 2025

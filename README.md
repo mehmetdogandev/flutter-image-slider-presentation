@@ -5,6 +5,13 @@
 
 ---
 
+## 🎬 Demo Video
+
+https://github.com/user-attachments/assets/6e0a6560-4bea-422a-9c64-65af67e21feb
+
+> Uygulamanın tüm özelliklerini gösteren demo videosu
+
+---
 ## 📝 Proje Hakkında
 
 Bu proje, Flutter framework'ü kullanılarak geliştirilmiş interaktif bir görsel sunum uygulamasıdır. Kullanıcılar kendi resimlerini seçerek, özelleştirilebilir geçiş efektleri ve sürelerle profesyonel sunumlar oluşturabilirler.
